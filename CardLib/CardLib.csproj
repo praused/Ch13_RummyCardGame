@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{64C70B71-5A95-4FFA-8F6D-7E63C1648D3A}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{F9A854F9-F481-4E0B-B4C5-EB57C03BB59C}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Ch13_RummyCardGame</RootNamespace>
-    <AssemblyName>Ch13_RummyCardGame</AssemblyName>
+    <RootNamespace>CardLib</RootNamespace>
+    <AssemblyName>CardLib</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -43,19 +40,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Game.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="Card.cs" />
+    <Compile Include="CardOutOfRangeException.cs" />
+    <Compile Include="Cards.cs" />
+    <Compile Include="Deck.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Rank.cs" />
+    <Compile Include="Suit.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CardLib\CardLib.csproj">
-      <Project>{f9a854f9-f481-4e0b-b4c5-eb57c03bb59c}</Project>
-      <Name>CardLib</Name>
-    </ProjectReference>
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
